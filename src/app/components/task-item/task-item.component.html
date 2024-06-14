@@ -1,0 +1,9 @@
+<div class="task"
+    (dblclick)="onToggle(tarefa)"
+    [ngClass]="{reminder: tarefa.concluido}"
+>
+    <h3>{{tarefa.tarefa}}
+        <fa-icon [icon]="faTimes" [ngStyle]="{'color': 'red'}" (click)="onDelete(tarefa)" ></fa-icon>
+    </h3>
+    <p>{{tarefa.categoria}}</p>
+</div>
